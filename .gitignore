@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+*.pdf
+.grok*
+AXOLOTL_REFERENCE.md
+PLAN.md
