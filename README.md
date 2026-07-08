@@ -80,7 +80,7 @@ trainer.train()
 
 ```bash
 pip install trl
-git clone https://github.com/your-org/trl-ebft
+git clone https://github.com/alex-ht/trl-ebft
 cd trl-ebft
 pip install -e .
 ```
