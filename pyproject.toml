@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trl-ebft"
+version = "0.3.0"
+description = "Energy-Based Fine-Tuning (EBFT) for use alongside the official `trl` package"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+authors = [
+    { name = "trl-ebft contributors" },
+]
+keywords = ["trl", "rl", "fine-tuning", "ebft", "energy-based", "pytorch", "transformers"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.40.0",
+    "trl>=0.9.0",
+    "peft>=0.10.0",
+    "datasets>=2.18.0",
+    "accelerate>=0.28.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff",
+    "black",
+]
+
+[project.urls]
+Homepage = "https://github.com/alex-ht/trl-ebft"
+Issues = "https://github.com/alex-ht/trl-ebft/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["trl_ebft*"]
+exclude = ["tests*", "examples*"]
+
+[tool.setuptools.package-data]
+trl_ebft = ["py.typed"]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]  # line length handled by black

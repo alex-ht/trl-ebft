@@ -108,4 +108,4 @@ __all__ = [
     "get_layer_indices_from_fractions",
 ]
 
-__version__ = "0.2.0-ebft-strided"
+__version__ = "0.3.0"
